@@ -1,0 +1,59 @@
+copyright = "© Jimmy Lin 2024"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+languageCode = "en"
+timeZone = "Europe/Berlin"
+timeout = "120s"
+title = "Glimpses"
+
+[params]
+  defaultTheme = "dark"
+  description = "Example site for hugo-theme-gallery" # 不知道會顯示在哪
+  title = "My Gallery"
+  [params.author]
+    email = "user@example.com"
+    name = "Your Name"
+  [params.socialIcons]
+    # facebook = "https://www.facebook.com/"
+    instagram = "https://www.instagram.com/chun_wei_0105/"
+    # github = "https://github.com/nicokaiser/hugo-theme-gallery/"
+    youtube = "https://www.youtube.com/channel/UCyz4bBUizrgw76yhiOE9eJA"
+    # email = "mailto:user@example.com"
+    #website = "https://example.com"
+    #mastodon = "https://example.com"
+    #pixelfed = "https://example.com"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [module.hugoVersion]
+    min = "0.121.2"
+  [[module.imports]]
+    path = "github.com/nicokaiser/hugo-theme-gallery/v4"
+
+[menu]
+  [[menu.footer]]
+    name = "Hugo Gallery"
+    url = "https://github.com/nicokaiser/hugo-theme-gallery/"
+    weight = 3
+
+  [[menu.footer]]
+    name = "Photo use notice"
+    url = "https://forms.gle/FtUUjSqzh3kWqsoJ8"
+    weight = 3
+
+[services]
+  [services.rss]
+    limit = 100
